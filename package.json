@@ -25,13 +25,24 @@
     "@angular-devkit/build-angular": "^19.2.7",
     "@angular/cli": "^19.2.7",
     "@angular/compiler-cli": "^19.2.0",
+    "@biomejs/biome": "^1.9.4",
+    "@cucumber/cucumber": "^7.3.1",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.51.1",
     "@types/jasmine": "~5.1.0",
+    "@types/karma": "~6.3.9",
+    "@types/karma-chrome-launcher": "~3.1.4",
+    "@types/karma-coverage": "~2.0.3",
+    "@types/karma-jasmine": "~4.0.5",
+    "@types/karma-jasmine-html-reporter": "~1.7.3",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "playwright": "^1.51.1",
     "typescript": "~5.7.2"
-  }
+  },
+  "license": "0BSD"
 }
