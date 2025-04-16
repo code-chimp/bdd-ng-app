@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TaskFormComponent } from './components/task-form.component';
-import { TaskListComponent } from './components/task-list.component';
+import { TaskFormComponent } from './components/task-list/task-form/task-form.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,4 @@ import { TaskListComponent } from './components/task-list.component';
   imports: [TaskFormComponent, TaskListComponent],
   templateUrl: './app.component.html',
 })
-export class AppComponent { }
+export class AppComponent {}

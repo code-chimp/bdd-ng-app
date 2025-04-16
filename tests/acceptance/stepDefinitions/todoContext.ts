@@ -7,7 +7,7 @@ const todoInput = '.todo-input';
 const todoButton = '.todo-button';
 const todoItem = '.todo .todo-item';
 
-Given('a user has navigated to the homepage', async () => {
+Given('a user is on the homepage', async () => {
   await page.goto(url);
   const locator = page.locator(homepageSelector);
   await expect(locator).toBeVisible();

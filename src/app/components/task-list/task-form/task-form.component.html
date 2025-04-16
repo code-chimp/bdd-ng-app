@@ -1,0 +1,18 @@
+<div class="mb-6">
+  <form [formGroup]="taskForm" (ngSubmit)="handleSubmit()" class="flex gap-2">
+    <input
+      type="text"
+      name="name"
+      id="name"
+      formControlName="name"
+      placeholder="Add a new task"
+      class="flex-1 rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+      required />
+    <button
+      type="submit"
+      class="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+      [disabled]="!taskForm.valid">
+      Add Task
+    </button>
+  </form>
+</div>

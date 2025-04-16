@@ -1,5 +1,14 @@
 # BDD with Cucumber and Playwright
 
+## TODO
+
+- [ ] Tighten up [ESLint](https://eslint.org/docs/latest/use/getting-started)
+- [ ] Correct Playwright [locators](https://playwright.dev/docs/locators)
+- [ ] Find best gherkin plugin for VSCode and setup suggested plugins
+- [ ] Pull some of the tailwind into `@apply`s
+- [ ] Touch up npm scripts
+- [ ] Document all of the things
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
 ## Development server
