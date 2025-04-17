@@ -1,17 +1,61 @@
-# BDD with Cucumber and Playwright
+# BDD Angular Demo with Cucumber.js and Playwright
 
 ## TODO
 
-- [ ] Tighten up [ESLint](https://eslint.org/docs/latest/use/getting-started)
 - [ ] Correct Playwright [locators](https://playwright.dev/docs/locators)
-- [ ] Find best gherkin plugin for VSCode and setup suggested plugins
-- [ ] Pull some of the tailwind into `@apply`s
-- [ ] Touch up npm scripts
-- [ ] Document all of the things
+- [ ] Ensure vscode cucumber is configured to find the step definitions
+- [ ] Ensure optimal cucumber.js configuration
+- [ ] Ensure optimal playwright configuration
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+This project demonstrates the integration of Behavior-Driven Development (BDD) practices with a modern 
+Angular 19 application, utilizing Cucumber.js for BDD testing and Playwright for automated browser testing.
 
-## Development server
+## Technologies Used
+
+- **Angular 19**: Modern web application framework
+- **TypeScript**: Strongly-typed JavaScript for enhanced developer experience
+- **Cucumber.js**: BDD test automation framework
+- **Playwright**: Browser automation library for end-to-end testing
+- **TailwindCSS**: Utility-first CSS framework for efficient styling
+
+## The Value of BDD and Living Documentation
+
+Behavior-Driven Development bridges the gap between technical and non-technical stakeholders by:
+
+1. **Creating a common language**: Gherkin syntax (Given-When-Then) provides readable test scenarios that business stakeholders can understand
+2. **Documenting specifications**: Test scenarios serve as living documentation that evolves with the application
+3. **Validating acceptance criteria**: Ensures development meets business requirements
+4. **Facilitating collaboration**: Promotes shared understanding across the entire team
+
+This approach results in:
+
+- Better alignment between business goals and development efforts
+- Clearer requirements documentation
+- More effective regression testing
+- Improved communication between all stakeholders
+
+## The Value of TailwindCSS
+
+TailwindCSS provides significant advantages to development teams by:
+
+1. **Accelerating UI Development**: Utility-first approach eliminates the need to write custom CSS, allowing faster implementation of designs.
+2. **Maintaining Consistency**: Pre-defined design system with constraints for spacing, colors, typography, and more ensures visual consistency.
+3. **Reducing CSS Complexity**:
+   - No need to create and maintain complex CSS class naming systems
+   - Minimizes CSS specificity issues and selector conflicts
+   - Results in smaller bundle sizes through optimized production builds
+4. **Improving Developer Experience**:
+   - Write styles directly in your markup without context switching
+   - IntelliSense support in modern IDEs provides autocomplete
+   - Predictable styling behavior with direct control over every element
+5. **Supporting Responsive Design**: Built-in responsive modifiers (sm:, md:, lg:, etc.) make creating adaptive interfaces straightforward.
+
+This project demonstrates how TailwindCSS integrates with Angular components to create maintainable, consistent UI patterns while 
+reducing style-related technical debt.
+
+## Development Guide
+
+### Development server
 
 To start a local development server, run:
 
@@ -21,7 +65,7 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+### Code Scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
@@ -35,7 +79,7 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+### Building
 
 To build the project run:
 
@@ -45,23 +89,36 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+### Running Unit Tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
 ```bash
-ng test
+npm run test:spec
 ```
+### End-to-End / Assurance Tests
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+First-time setup requires install Playwright browsers:
 
 ```bash
-ng e2e
+npm run e2e:install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+#### Running All Tests
+
+To run the BDD tests with Cucumber.js and Playwright:
+
+```bash
+npm run test:e2e
+```
+
+#### Executing a Specific Feature
+
+To run a specific feature file, use the following command:
+
+```bash
+npm run test:e2e ./tests/assurance/features/your-feature-file.feature
+```
 
 ## Additional Resources
 

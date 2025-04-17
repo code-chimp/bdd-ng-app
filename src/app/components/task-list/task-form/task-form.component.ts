@@ -7,6 +7,7 @@ import { TasksService } from '../../../services/tasks.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './task-form.component.html',
+  styleUrls: ['./task-form.component.css'],
 })
 export class TaskFormComponent {
   private _tasksService = inject(TasksService);

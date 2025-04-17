@@ -8,6 +8,7 @@ import { Task } from '../../../models/task.model';
   standalone: true,
   imports: [NgClass],
   templateUrl: './task-item.component.html',
+  styleUrls: ['./task-item.component.css'],
 })
 export class TaskItemComponent {
   public task = input.required<Task>();

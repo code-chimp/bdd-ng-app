@@ -20,6 +20,8 @@
     "living-documentation",
     "training"
   ],
+  "homepage": ".",
+  "repository": "github:code-chimp/bdd-ng-app",
   "author": {
     "name": "Tim Goshinski",
     "email": "tim@code-chimp.com",
@@ -33,9 +35,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "e2e:install": "npx playwright install",
     "test:e2e": "cucumber-js",
+    "test:spec": "ng test",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "run-p lint:*",

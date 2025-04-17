@@ -1,13 +1,9 @@
-<div class="mb-3 flex items-center justify-between rounded-md border bg-white p-4 shadow-sm">
-  <div class="flex items-center gap-3">
-    <input
-      type="checkbox"
-      [checked]="task().completed"
-      (change)="toggleCompleted()"
-      class="h-5 w-5 accent-blue-500" />
+<div class="item-container">
+  <div class="item">
+    <input type="checkbox" [checked]="task().completed" (change)="toggleCompleted()" />
     <span [ngClass]="{ 'text-gray-500 line-through': task().completed }" class="text-lg">
       {{ task().name }}
     </span>
   </div>
-  <button (click)="deleteTask()" class="text-red-500 hover:text-red-700">Delete</button>
+  <button (click)="deleteTask()">Delete</button>
 </div>
