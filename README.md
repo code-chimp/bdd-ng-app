@@ -2,7 +2,6 @@
 
 ## TODO
 
-- [ ] Correct Playwright [locators](https://playwright.dev/docs/locators)
 - [ ] Ensure vscode cucumber is configured to find the step definitions
 - [ ] Ensure optimal cucumber.js configuration
 - [ ] Ensure optimal playwright configuration
