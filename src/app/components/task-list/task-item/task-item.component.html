@@ -1,9 +1,24 @@
-<div class="item-container">
+<div class="item-card" role="listitem">
   <div class="item">
-    <input type="checkbox" [checked]="task().completed" (change)="toggleCompleted()" />
-    <span [ngClass]="{ 'text-gray-500 line-through': task().completed }" class="text-lg">
-      {{ task().name }}
-    </span>
+    <label [for]="task().id">
+      <input
+        type="checkbox"
+        [name]="task().id"
+        [id]="task().id"
+        [checked]="task().completed"
+        (change)="toggleCompleted()"
+        [attr.aria-label]="
+          'Mark ' + task().name + ' as ' + (task().completed ? 'incomplete' : 'complete')
+        " />
+      <span [ngClass]="{ 'text-gray-500 line-through': task().completed }" class="text-lg">
+        {{ task().name }}
+      </span>
+    </label>
   </div>
-  <button (click)="deleteTask()">Delete</button>
+  <button
+    type="button"
+    [attr.aria-label]="'Delete task: ' + task().name"
+    (click)="deleteTask()">
+    Delete
+  </button>
 </div>

@@ -1,12 +1,28 @@
 <div class="container">
-  <form [formGroup]="taskForm" (ngSubmit)="handleSubmit()" class="form">
+  <form
+    [formGroup]="taskForm"
+    (ngSubmit)="handleSubmit()"
+    class="form"
+    role="form"
+    aria-labelledby="formTitle">
+    <h2 id="formTitle" class="sr-only">Add new task</h2>
     <input
       type="text"
       name="name"
       id="name"
       formControlName="name"
       placeholder="Add a new task"
+      [attr.aria-invalid]="
+        taskForm.controls.name.invalid && taskForm.controls.name.touched ? true : false
+      "
+      aria-required="true"
       required />
-    <button type="submit" [disabled]="!taskForm.valid">Add Task</button>
+    <button
+      type="submit"
+      [ngClass]="{ 'cursor-not-allowed opacity-50': !taskForm.valid }"
+      [disabled]="!taskForm.valid"
+      [attr.aria-label]="'Add task to list'">
+      Add Task
+    </button>
   </form>
 </div>

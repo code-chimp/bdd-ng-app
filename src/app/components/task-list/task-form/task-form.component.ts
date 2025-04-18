@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TasksService } from '../../../services/tasks.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-task-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [NgClass, ReactiveFormsModule],
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.css'],
 })
