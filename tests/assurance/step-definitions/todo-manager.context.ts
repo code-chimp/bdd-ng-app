@@ -38,13 +38,6 @@ When('the user clicks the checkbox for the task labeled {string}', async (taskNa
   await checkbox.click();
 });
 
-When('the user clicks the delete button for the task labeled {string}', async (taskName: string) => {
-  const deleteButton = page.getByRole('button', {
-    name: `Delete task: ${taskName}`, // When unchecked, aria-label says "Mark as complete"
-  });
-  await deleteButton.click();
-});
-
 // Then
 Then('card {string} should be displayed in the todo list', async (task: string) => {
   const text = page.getByText(task, { exact: true });
@@ -65,8 +58,4 @@ Then('the task labeled {string} should not be marked as completed', async (taskN
   });
 
   await expect(checkbox).not.toBeChecked();
-});
-
-Then('card {string} should be removed from the todo list', async (task: string) => {
-  await expect(page.getByText(task, { exact: true })).not.toBeVisible();
 });

@@ -1,0 +1,13 @@
+{
+  "cucumber.features": [
+    "tests/assurance/features/**/*.feature",
+  ],
+  "cucumber.glue": [
+    "tests/assurance/step-definitions/**/*.ts",
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.reportDescriptionlessDisables": true
+}
