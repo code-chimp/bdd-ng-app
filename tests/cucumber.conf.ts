@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
 /// <reference path="./global.d.ts" />
 import { After, AfterAll, Before, BeforeAll, setDefaultTimeout } from '@cucumber/cucumber';
 import { chromium } from 'playwright';
@@ -7,7 +8,7 @@ setDefaultTimeout(60000);
 BeforeAll(async () => {
   global.browser = await chromium.launch({
     headless: false,
-    slowMo: 1000,
+    slowMo: 500,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 });

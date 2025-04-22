@@ -46,7 +46,7 @@ Then('card {string} should be displayed in the todo list', async (task: string) 
 
 Then('the task labeled {string} should be marked as completed', async (taskName: string) => {
   const checkbox = page.getByRole('checkbox', {
-    name: `Mark ${taskName} as incomplete`, // When unchecked, aria-label says "Mark as complete"
+    name: `Mark ${taskName} as incomplete`, // When checked, aria-label says "Mark as incomplete"
   });
 
   await expect(checkbox).toBeChecked();
