@@ -1,11 +1,17 @@
 {
   "cucumber.features": [
-    "tests/assurance/features/**/*.feature",
+    "tests/assurance/features/**/*.feature"
   ],
   "cucumber.glue": [
-    "tests/assurance/step-definitions/**/*.ts",
+    "tests/assurance/step-definitions/**/*.ts"
   ],
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.foldingImportsByDefault": false,
   "editor.formatOnSave": true,
   "eslint.enable": true,
   "stylelint.configFile": ".stylelintrc.json",
