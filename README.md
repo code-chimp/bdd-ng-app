@@ -67,3 +67,5 @@ reducing style-related technical debt.
 2. For Angular-specific instructions, refer to the [Angular Development Guide](docs/angular-development.md).
 3. For an overview of the project structure, check out the [Project Structure Documentation](docs/project-structure.md).
 4. For detailed instructions on how to implement a new scenario, please refer to the [Live Demo Documentation](docs/live-demo.md).
+5. [Would You Like to Know More?](./docs/would-you-like-to-know-more.md): Additional articles and tutorials about the methods and technologies used in this project.
+

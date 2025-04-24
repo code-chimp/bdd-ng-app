@@ -36,7 +36,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "e2e:install": "npx playwright install",
-    "test:e2e": "cucumber-js",
+    "test:e2e": "cross-env TS_NODE_PROJECT=tsconfig.cucumber.json cucumber-js",
     "test:spec": "ng test",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
