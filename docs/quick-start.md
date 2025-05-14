@@ -51,17 +51,17 @@ Ensure you have the following installed on your system:
    Then, run all assurance tests:
 
    ```bash
-   npm run test:e2e
+   npm run test:bdd
    ```
 
    or execute a specific feature:
 
    ```bash
-   npm run test:e2e ./tests/assurance/features/your-feature-file.feature
+   npm run test:bdd ./tests/assurance/features/your-feature-file.feature
    ```
 
    or run a specific scenario using the scenario's text:
 
    ```bash
-   npm run test:e2e ./tests/assurance/features/your-feature-file.feature -- --name "Delete an existing task item from the task list"
+   npm run test:bdd ./tests/assurance/features/your-feature-file.feature -- --name "Delete an existing task item from the task list"
    ```
