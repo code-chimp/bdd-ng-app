@@ -26,10 +26,13 @@ When('the user adds {string} to the todo list using the input field', async (tas
   await todoManagerPage.addTask(task);
 });
 
-When('the user clicks the checkbox for the task labeled {string}', async (taskName: string) => {
-  // await todoManagerPage.markTaskComplete(taskName);
-  await todoManagerPage.toggleTask(taskName);
-});
+When(
+  'the user clicks the checkbox for the task labeled {string}',
+  async (taskName: string) => {
+    // await todoManagerPage.markTaskComplete(taskName);
+    await todoManagerPage.toggleTask(taskName);
+  },
+);
 
 // Then -- assertions
 Then('card {string} should be displayed in the todo list', async (task: string) => {
@@ -42,7 +45,10 @@ Then('the task labeled {string} should be marked as completed', async (taskName:
   await expect(checkbox).toBeChecked();
 });
 
-Then('the task labeled {string} should not be marked as completed', async (taskName: string) => {
-  const checkbox = await todoManagerPage.getTaskCheckbox(taskName, false);
-  await expect(checkbox).not.toBeChecked();
-});
+Then(
+  'the task labeled {string} should not be marked as completed',
+  async (taskName: string) => {
+    const checkbox = await todoManagerPage.getTaskCheckbox(taskName, false);
+    await expect(checkbox).not.toBeChecked();
+  },
+);

@@ -4,12 +4,12 @@ Follow these steps to quickly set up and run the project:
 
 ## Prerequisites
 
-Ensure you have the following installed on your system:
+Ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v20 or later)
-- [Angular CLI](https://angular.io/cli) (v19 or later)
+- [Node.js](https://nodejs.org/) v22.15.1 or compatible (a `.nvmrc` file is provided)
+- [Angular CLI](https://angular.io/cli) v19.2.x
 
-## Steps
+## Project Setup
 
 1. **Clone the Repository**
 
@@ -19,6 +19,17 @@ Ensure you have the following installed on your system:
    ```
 
 2. **Install Dependencies**
+
+   Make sure you're using the correct Node version:
+
+   ```bash
+   # If using nvm
+   nvm use
+   # If using Volta (recommended)
+   # Volta will automatically use the correct version
+   ```
+
+   Install dependencies:
 
    ```bash
    npm install
@@ -30,38 +41,77 @@ Ensure you have the following installed on your system:
    npm start
    ```
 
-   Open your browser and navigate to `http://localhost:4200/` to view the application.
+   The application will be available at `http://localhost:4200/`
 
-4. **Run Unit Tests**
+## Running Tests
 
-   To execute unit tests:
+### Unit Tests
 
-   ```bash
-   npm test
-   ```
+Execute the Angular unit tests:
 
-5. **Run End-to-End Tests**
+```bash
+npm run test:spec
+```
 
-   First, install Playwright browsers:
+### BDD Tests
+
+1. **Install Playwright Browsers** (first time only):
 
    ```bash
    npm run e2e:install
    ```
 
-   Then, run all assurance tests:
+2. **Run BDD Tests**:
 
    ```bash
+   # Run all tests with HTML reports
    npm run test:bdd
+
+   # Run specific feature file
+   npm run test:bdd:run ./tests/assurance/features/your-feature.feature
+
+   # Run specific scenario
+   npm run test:bdd:run ./tests/assurance/features/your-feature.feature -- --name "Your scenario name"
    ```
 
-   or execute a specific feature:
+## Development Tools
 
-   ```bash
-   npm run test:bdd ./tests/assurance/features/your-feature-file.feature
-   ```
+### Code Quality
 
-   or run a specific scenario using the scenario's text:
+- **Format Code**:
 
-   ```bash
-   npm run test:bdd ./tests/assurance/features/your-feature-file.feature -- --name "Delete an existing task item from the task list"
-   ```
+  ```bash
+  npm run format:fix    # Fix formatting issues
+  npm run format:check  # Check formatting only
+  ```
+
+- **Lint Code**:
+  ```bash
+  npm run lint       # Run all linters
+  npm run fix:ts     # Fix TypeScript issues
+  npm run fix:styles # Fix CSS issues
+  ```
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+### Watch Mode
+
+For development with automatic rebuilds:
+
+```bash
+npm run watch
+```
+
+## Test Reports
+
+After running BDD tests:
+
+- Basic HTML report: `reports/bdd-report-basic.html`
+- Detailed HTML report: `reports/bdd-report.html`
+- Enhanced multi-format report: `reports/bdd-report-multiple/index.html`
+- JSON data: `reports/bdd-report.json`
+- JUnit XML: `reports/bdd-report.xml`

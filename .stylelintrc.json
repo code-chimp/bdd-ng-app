@@ -4,13 +4,7 @@
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": [
-          "reference",
-          "responsive",
-          "screen",
-          "tailwind",
-          "variants"
-        ]
+        "ignoreAtRules": ["reference", "responsive", "screen", "tailwind", "variants"]
       }
     ],
     "at-rule-no-deprecated": [true, { "ignoreAtRules": ["apply"] }],

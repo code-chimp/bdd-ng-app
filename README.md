@@ -1,6 +1,6 @@
 # BDD Angular Demo with Cucumber.js and Playwright
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io) [![license](https://img.shields.io/badge/license-0BSD-green.svg)](https://github.com/code-chimp/bdd-ng-app/blob/main/LICENSE) [![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/npm) [![angular](https://img.shields.io/badge/angular-19.0.0-red.svg)](https://angular.io/) [![tailwindcss](https://img.shields.io/badge/tailwindcss-3.3.2-blue.svg)](https://tailwindcss.com/) [![cucumber](https://img.shields.io/badge/cucumber-8.7.0-yellow.svg)](https://cucumber.io/) [![playwright](https://img.shields.io/badge/playwright-1.38.0-orange.svg)](https://playwright.dev/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io) [![license](https://img.shields.io/badge/license-0BSD-green.svg)](https://github.com/code-chimp/bdd-ng-app/blob/main/LICENSE) [![node](https://img.shields.io/badge/node-22.15.1-green.svg)](https://nodejs.org) [![angular](https://img.shields.io/badge/angular-19.2.11-red.svg)](https://angular.io/) [![tailwindcss](https://img.shields.io/badge/tailwindcss-4.1.7-blue.svg)](https://tailwindcss.com/) [![cucumber](https://img.shields.io/badge/cucumber-11.3.0-yellow.svg)](https://cucumber.io/) [![playwright](https://img.shields.io/badge/playwright-1.52.0-orange.svg)](https://playwright.dev/)
 
 <table style="border:none">
 <tbody>
@@ -68,4 +68,3 @@ reducing style-related technical debt.
 3. For an overview of the project structure, check out the [Project Structure Documentation](docs/project-structure.md).
 4. For detailed instructions on how to implement a new scenario, please refer to the [Live Demo Documentation](docs/live-demo.md).
 5. [Would You Like to Know More?](./docs/would-you-like-to-know-more.md): Additional articles and tutorials about the methods and technologies used in this project.
-

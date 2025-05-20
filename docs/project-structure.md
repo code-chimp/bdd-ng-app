@@ -5,84 +5,100 @@ This document provides an overview of the project structure for better understan
 ## Root Files
 
 - **angular.json**: Angular CLI configuration file.
-- **cucumber.mjs**: Configuration for Cucumber.js.
-- **eslint.config.mjs**: ESLint configuration file.
+- **cucumber.mjs**: Configuration for Cucumber.js with parallel execution and multiple reporting formats.
+- **eslint.config.mjs**: ESLint configuration file with TypeScript, JSON, and Markdown support.
 - **LICENSE**: License information for the project.
-- **package.json**: Contains metadata about the project and its dependencies.
-- **README.md**: Main documentation file for the project.
-- **tsconfig\*.json**: TypeScript configuration files for the application and tests.
+- **package.json**: Contains metadata, dependencies, and scripts for the project.
+- **README.md**: Main project documentation.
+- **tsconfig\*.json**: TypeScript configuration files for different parts of the application.
 
-## Folders
+## Key Directories
 
 ### assets/
 
-Contains static assets such as images.
-
-- **taming-assurance.jpg**: Image used in the documentation or application.
+Static assets like images used in documentation and application.
 
 ### docs/
 
-Contains documentation files.
+Project documentation:
 
-- **live-demo.md**: Instructions for implementing a new scenario.
-- **project-structure.md**: (This document) Overview of the project structure.
+- **angular-development.md**: Angular-specific development guidelines
+- **live-demo.md**: Step-by-step guide for implementing new test scenarios
+- **project-structure.md**: (This document) Project structure overview
+- **quick-start.md**: Setup and usage guide
+- **would-you-like-to-know-more.md**: Additional resources and tutorials
 
 ### public/
 
-Contains public assets served directly by the application.
+Public assets:
 
-- **favicon.ico**: Favicon for the application.
-- **favicon.svg**: SVG version of the favicon.
+- **favicon.ico/svg**: Application favicons
+
+### reports/
+
+Test execution reports:
+
+- **bdd-report-basic.html**: Basic HTML report
+- **bdd-report.html**: Detailed HTML report with test statistics
+- **bdd-report.json**: JSON report data
+- **bdd-report.xml**: JUnit XML report format
+- **bdd-report-multiple/**: Enhanced multi-format report with UI
+
+### scripts/
+
+Utility scripts:
+
+- **cucumber-html-reporter.mjs**: Basic HTML report generator
+- **multiple-cucumber-html-reporter.mjs**: Enhanced HTML report generator
+- **notify-lockfile-changed.js**: Git hook notification for package-lock.json changes
+- **validate-lockfile.cjs**: NPM lockfile validation
 
 ### src/
 
-Contains the main source code of the application.
-
-- **index.html**: Entry HTML file for the application.
-- **main.ts**: Main entry point for the Angular application.
-- **styles.css**: Global styles for the application.
+Application source code:
 
 #### app/
 
-Contains application-specific components, models, and services.
+Angular application components:
 
-- **app.component.html**: HTML template for the main app component.
-- **app.component.ts**: TypeScript logic for the main app component.
-- **app.config.ts**: Configuration for the app.
-- **app.routes.ts**: Routing configuration for the app.
+- **app.component.{html,ts}**: Root application component
+- **app.config.ts**: App configuration with experimental features
+- **app.routes.ts**: Application routing
 
 ##### components/
 
-Contains reusable components.
+Feature components:
 
-- **task-list/**: Task list component and its subcomponents.
-  - **task-form/**: Task form component files.
-  - **task-item/**: Task item component files.
+- **task-list/**: Task management components
+  - **task-form/**: New task creation form
+  - **task-item/**: Individual task item display
 
 ##### models/
 
-Contains data models.
+Data models:
 
-- **task.model.ts**: Model for tasks.
+- **task.model.ts**: Task interface definition
 
 ##### services/
 
-Contains services for business logic and data handling.
+Application services:
 
-- **tasks.service.ts**: Service for managing tasks.
+- **tasks.service.ts**: Task management service using Angular signals
 
 ### tests/
 
-Contains test-related files and configurations.
-
-- **cucumber.conf.ts**: Configuration for Cucumber.js tests.
-- **global.d.ts**: Global TypeScript definitions for tests.
+Test related files:
 
 #### assurance/
 
-Contains assurance tests.
+BDD test infrastructure:
 
-- **features/**: Feature files for Cucumber.js.
-  - **todo-manager.feature**: Feature file for the Todo Manager.
-- **step-definitions/**: Step definitions for Cucumber.js.
-  - **todo-manager.context.ts**: Context and step definitions for the Todo Manager.
+- **features/**: Cucumber feature files
+- **hooks/**: Test lifecycle hooks
+- **step-definitions/**: Step implementations
+
+#### page-objects/
+
+Playwright page objects:
+
+- **todo-manager.page.ts**: Todo application page model

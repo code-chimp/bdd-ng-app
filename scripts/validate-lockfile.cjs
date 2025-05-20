@@ -11,11 +11,14 @@ function checkLockFiles() {
   let error = '';
 
   if (fs.existsSync('pnpm-lock.yaml')) {
-    error = 'Invalid occurrence of "pnpm-lock.yaml" file. Please remove it and use only "package-lock.json"';
+    error =
+      'Invalid occurrence of "pnpm-lock.yaml" file. Please remove it and use only "package-lock.json"';
   } else if (fs.existsSync('bun.lockb')) {
-    error = 'Invalid occurrence of "bun.lockb" file. Please remove it and use only "package-lock.json"';
+    error =
+      'Invalid occurrence of "bun.lockb" file. Please remove it and use only "package-lock.json"';
   } else if (fs.existsSync('yarn.lock')) {
-    error = 'Invalid occurrence of "yarn.lock" file. Please remove it and use only "package-lock.json"';
+    error =
+      'Invalid occurrence of "yarn.lock" file. Please remove it and use only "package-lock.json"';
   } else if (!fs.existsSync('package-lock.json')) {
     error = 'Missing "package-lock.json" file. Please run "npm install" to generate it';
   }
