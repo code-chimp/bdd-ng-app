@@ -15,7 +15,7 @@ export default {
 
   // Array of files or glob patterns for step definitions and hooks
   require: [
-    'tests/assurance/hooks/cucumber.hooks.ts',
+    'tests/assurance/features/support/hooks.ts',
     'tests/assurance/step-definitions/**/*.ts',
   ],
 

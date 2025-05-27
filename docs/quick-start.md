@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Follow these steps to quickly set up and run the project:
+Welcome to the BDD Angular Demo with Cucumber.js and Playwright! This guide will help you quickly set up and run the project.
 
 ## Prerequisites
 
@@ -64,14 +64,17 @@ npm run test:spec
 2. **Run BDD Tests**:
 
    ```bash
-   # Run all tests with HTML reports
+   # Run all tests and generate HTML reports
    npm run test:bdd
 
-   # Run specific feature file
+   # Run a specific feature file
    npm run test:bdd:run ./tests/assurance/features/your-feature.feature
 
-   # Run specific scenario
+   # Run a specific scenario
    npm run test:bdd:run ./tests/assurance/features/your-feature.feature -- --name "Your scenario name"
+   
+   # Run scenarios specified by tags (see https://cucumber.io/docs/cucumber/api#tag-expressions)
+   npm run test:bdd:run -- --tags "@your-tag and not @other-tag"
    ```
 
 ## Development Tools

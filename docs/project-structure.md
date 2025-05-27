@@ -94,7 +94,7 @@ Test related files:
 BDD test infrastructure:
 
 - **features/**: Cucumber feature files
-- **hooks/**: Test lifecycle hooks
+  - **support/hooks.ts**: Test lifecycle hooks
 - **step-definitions/**: Step implementations
 
 #### page-objects/
