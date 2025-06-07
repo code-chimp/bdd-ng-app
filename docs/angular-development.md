@@ -7,7 +7,7 @@ This guide covers Angular (v19.2+) development specifics for this project.
 ### Prerequisites
 
 - Node.js v22.15.1 (managed by Volta)
-- Angular CLI v19.2.x
+- Angular CLI v20.0.x
 - VS Code with recommended extensions (see `.vscode/extensions.json`)
 
 ## Development Server

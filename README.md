@@ -20,7 +20,7 @@
 
 ## Technologies Used
 
-- **[Angular 19](https://angular.io)**: Modern web application framework
+- **[Angular 20](https://angular.dev)**: Modern web application framework
 - **[TypeScript](https://www.typescriptlang.org/)**: Strongly-typed JavaScript for enhanced developer experience
 - **[Cucumber.js](https://cucumber.io/)**: BDD test automation framework ([see for more info](https://cucumber.io/docs/guides/10-minute-tutorial))
 - **[Playwright](https://playwright.dev/)**: Browser automation library for end-to-end testing

@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference
-/// <reference path="./global.d.ts" />
 import {
   After,
   AfterAll,
@@ -14,10 +12,12 @@ import {
 } from '@cucumber/cucumber';
 import { chromium } from 'playwright';
 
+const timeoutInMs = 60 * 1000;
+
 /**
  * Sets the default timeout for Cucumber steps to 60 seconds.
  */
-setDefaultTimeout(60000);
+setDefaultTimeout(timeoutInMs);
 
 /**
  * Hook that runs once before all tests.

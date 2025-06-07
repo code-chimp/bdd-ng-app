@@ -9,8 +9,11 @@
     "noEmit": true,
     "esModuleInterop": true,
     "strict": true,
-    "types": ["node", "@cucumber/cucumber", "playwright"]
+    "types": ["node", "@cucumber/cucumber", "playwright", "./types/global"]
   },
-  "include": ["tests/**/*.ts", "tests/**/*.cts"],
-  "exclude": ["node_modules"]
+  "include": ["tests/**/*.ts", "tests/**/*.cts", "types/**/*.d.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "transpileOnly": true
+  }
 }
